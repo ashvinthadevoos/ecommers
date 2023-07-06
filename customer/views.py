@@ -31,7 +31,7 @@ class SignUpView(View):
         if form.is_valid():
             form.save()
             messages.success(request,'account created succesfully')
-            return redirect('signup')
+            return redirect('index')
         else:
             messages.error(request,'account creation failed')
             return render(request,'signup.html',{'form':form})
